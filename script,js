@@ -3,28 +3,35 @@
 // let operator = prompt('Whats your operator? (+, -, *, /');
 
 
-
-function add (a, b){   
- let result = +a + +b;
- console.log(result);
+// add function
+function add (firstValue, secondValue){   
+ let result = +firstValue + +secondValue;
+    currentValue = result;
+    updateDisplay()
 }
 
-
-function subtract (a, b){
-    let result = +a - +b;
-    console.log(result);
+// subtract function
+function subtract (firstValue, secondValue){
+    let result = +firstValue - +secondValue;
+    currentValue = result;
+    updateDisplay()
 }
 
-function multiply (a, b){
-    let result = +a * +b;
-    console.log(result);
+// multiply function
+function multiply (firstValue, secondValue){
+    let result = +firstValue * +secondValue;
+    currentValue = result;
+    updateDisplay()
 }
 
-function divide (a, b){
-    let result = +a / +b;
-    console.log(result);
+// divide function
+function divide (firstValue, secondValue){
+    let result = +firstValue / +secondValue;
+    currentValue = result;
+    updateDisplay()
 }
 
+// operate function
 function operate(a, operator, b){
 if(operator == '+'){
     add(a, b);
@@ -38,6 +45,209 @@ else if(operator == '*'){
 else if(operator == '/'){
     divide(a,b);
 }
+
+firstValue = currentValue;
+secondValue = "";
+operator = "";
 }
+
+// variables
+let display = document.querySelector('.display');
+let buttons = document.querySelectorAll('.btn');
+let value = document.querySelector('p');
+let buttonOne = document.getElementById('one');
+let buttonTwo = document.getElementById('two');
+let buttonThree = document.getElementById('three');
+let buttonFour = document.getElementById('four');
+let buttonFive = document.getElementById('five');
+let buttonSix = document.getElementById('six');
+let buttonSeven = document.getElementById('seven');
+let buttonEight = document.getElementById('eight');
+let buttonNine = document.getElementById('nine');
+let buttonZero = document.getElementById('zero');
+let buttonAdd = document.getElementById('add');
+let buttonSubtract = document.getElementById('subtract');
+let buttonMultiply = document.getElementById('multiply');
+let buttonDivide = document.getElementById('divide');
+let buttonDot = document.getElementById('dot');
+let buttonAC = document.getElementById('AC');
+let buttonDEL = document.getElementById('DEL');
+let buttonModular = document.getElementById('modular');
+let buttonEqual = document.getElementById('equal');
+
+// display values
+let currentValue = '';
+let firstValue = '';
+let secondValue = '';
+let operator = '';
+
+
+// Clear ALL function
+function clear(){
+currentValue = '';
+firstValue = '';
+operator = '';
+secondValue = '';
+updateDisplay();
+}
+
+// displayValue function
+function updateDisplay(){
+    display.textContent = currentValue;
+}
+
+// events
+    buttonOne.addEventListener('click', function(){
+    currentValue += '1';
+    updateDisplay();
+    if (operator){
+        secondValue += '1';
+    }
+    else {
+        firstValue += '1';
+    }
+    })
+    buttonTwo.addEventListener('click', function(){
+        currentValue += '2';
+        updateDisplay();
+        if (operator){
+            secondValue += '2';
+        }
+        else {
+            firstValue += '2';
+        }
+    })
+    buttonThree.addEventListener('click', function(){
+        currentValue += '3';
+        updateDisplay();
+            if (operator){
+                secondValue += '3';
+    }
+    else {
+        firstValue += '3';
+    }
+    })
+    buttonFour.addEventListener('click', function(){
+        currentValue += '4';
+        updateDisplay();
+        if (operator){
+            secondValue += '4';
+        }
+        else {
+            firstValue += '4';
+        }
+    })
+    buttonFive.addEventListener('click', function(){
+        currentValue += '5';
+        updateDisplay();
+        if (operator){
+            secondValue += '5';
+        }
+        else {
+            firstValue += '5';
+        }
+    })
+    
+    buttonSix.addEventListener('click', function(){
+        currentValue += '6';
+        updateDisplay();
+        if (operator){
+            secondValue += '6';
+        }
+        else {
+            firstValue += '6';
+        }
+    })
+    buttonSeven.addEventListener('click', function(){
+        currentValue += '7';
+        updateDisplay();
+        if (operator){
+            secondValue += '7';
+        }
+        else {
+            firstValue += '7';
+        }
+    })
+    buttonEight.addEventListener('click', function(){
+        currentValue += '8';
+        updateDisplay();
+        if (operator){
+            secondValue += '8';
+        }
+        else {
+            firstValue += '8';
+        }
+    })
+    buttonNine.addEventListener('click', function(){
+        currentValue += '9';
+        updateDisplay();
+        if (operator){
+            secondValue += '9';
+        }
+        else {
+            firstValue += '9';
+        }
+    })
+    buttonZero.addEventListener('click', function(){
+        currentValue += '0';
+        updateDisplay();
+        if (operator){
+            secondValue += '0';
+        }
+        else {
+            firstValue += '0';
+        }
+    })
+    buttonAdd.addEventListener('click', function(){
+        operator = '+';
+        currentValue += '+';
+        updateDisplay();
+    })
+    buttonSubtract.addEventListener('click', function(){
+        operator = '-';
+        currentValue += '-';
+        updateDisplay();
+    })
+    buttonMultiply.addEventListener('click', function(){
+        operator = '*';
+        currentValue += 'x';
+        updateDisplay();
+    })
+    buttonDivide.addEventListener('click', function(){
+        operator = '/';
+        currentValue += '÷';
+        updateDisplay();
+    })
+
+    buttonEqual.addEventListener('click', function(){
+        if (firstValue && operator && secondValue){
+            operate(firstValue, operator, secondValue);
+
+        }
+        firstValue = currentValue;
+    })
+    buttonAC.addEventListener('click', function(){
+        clear();
+    })
+
+
+    // buttonModular.addEventListener('click', function(){
+    //     let val = document.createElement ('p')
+    //     val.textContent = ('3');
+    //     display.appendChild (val);
+    // })
+    // buttonThree.addEventListener('click', function(){
+    //     let val = document.createElement ('p')
+    //     val.textContent = ('3');
+    //     display.appendChild (val);
+    // })
+    // buttonThree.addEventListener('click', function(){
+    //     let val = document.createElement ('p')
+    //     val.textContent = ('3');
+    //     display.appendChild (val);
+    // })
+
+
+
 
 // operate(a, operator, b);
