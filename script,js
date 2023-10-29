@@ -290,4 +290,15 @@ function updateDisplay(){
     buttonDEL.addEventListener('click', function(){
        undo();
     })
-
+    buttonDot.addEventListener('click', function(){
+        if (!currentValue.includes ('.')){
+            currentValue += '.';
+            updateDisplay();
+        if (operator){
+            secondValue += '.';
+        }
+        else{
+            firstValue += '.';
+        }
+    }
+    })
