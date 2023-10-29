@@ -3,7 +3,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #bde0fe;
+    background-color: #00A9E0;
 }
 
 *{
@@ -24,6 +24,7 @@ body{
     justify-content: center;
     margin-top: 255px;
     background-color: #6DE4E4;
+    box-shadow: 15px 5px 15px rgb(144, 136, 136);
 }
 
 .display{
@@ -35,10 +36,12 @@ body{
     justify-content: flex-end;
     align-items: flex-end;
     margin-bottom: 25px;
-    background-color: #FFFFFF;
+    background: linear-gradient(to bottom, #00A9E0, #0072A6);
     font-size: 60px;
     flex-wrap: wrap;
     border: solid #D3D3D3 5px;
+    box-shadow: 10px 5px 5px rgb(144, 136, 136);
+    color: #FFFFFF;
 }
 
 .value-text{
@@ -59,11 +62,12 @@ body{
     width: 85.51px;
     list-style-type: none;
     text-decoration: none;
-    background-color: #FF6BBE;
+    background-color: #005F8A;
     color: #FFFFFF;
     border: solid #FFFFFF 2px;
     border-radius: 9px;
     font-size: 40px;
+    box-shadow: 10px 5px 5px rgb(144, 136, 136);
 }
 
 .btn:hover{
@@ -71,9 +75,11 @@ body{
 }
 
 #AC{
-    background-color: #FF3366;
+    background-color: #FF4444;
 }
-
+#DEL{
+    background-color: #FF4444;
+}
 #zero{
     width: 175px;
 }
@@ -84,4 +90,27 @@ body{
 
 #AC:hover{
     background-color: #e9213f;
+}
+#DEL:hover{
+    background-color: #e9213f;
+}
+
+
+#divide, #multiply, #subtract, #add {
+    background-color: #004169;
+}
+
+
+
+#divide:hover{
+    background-color: #0869ae;
+}
+#add:hover{
+    background-color: #0869ae;
+}
+#multiply:hover{
+    background-color: #0869ae;
+}
+#subtract:hover{
+    background-color: #0869ae;
 }

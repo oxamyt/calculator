@@ -1,7 +1,3 @@
-// let a = prompt('What your first value?');
-// let b = prompt('Whats your second value?');
-// let operator = prompt('Whats your operator? (+, -, *, /');
-
 
 // add function
 function add (firstValue, secondValue){   
