@@ -26,9 +26,15 @@ function multiply (firstValue, secondValue){
 
 // divide function
 function divide (firstValue, secondValue){
+    if ( +secondValue === 0){
+        currentValue = 'ERROR';
+        updateDisplay()
+    }
+    else {
     let result = +firstValue / +secondValue;
     currentValue = result;
     updateDisplay()
+    }
 }
 
 // operate function
@@ -199,24 +205,56 @@ function updateDisplay(){
         }
     })
     buttonAdd.addEventListener('click', function(){
+        if (firstValue && operator && secondValue){
+            operate(firstValue, operator, secondValue);
+            firstValue = currentValue;
+            currentValue += '+';
+            updateDisplay();
+        }
+        else{
         operator = '+';
         currentValue += '+';
         updateDisplay();
+        }
     })
     buttonSubtract.addEventListener('click', function(){
+        if (firstValue && operator && secondValue){
+            operate(firstValue, operator, secondValue);
+            firstValue = currentValue;
+            currentValue += '-';
+            updateDisplay();
+        }
+        else{
         operator = '-';
         currentValue += '-';
         updateDisplay();
+        }
     })
     buttonMultiply.addEventListener('click', function(){
+        if (firstValue && operator && secondValue){
+            operate(firstValue, operator, secondValue);
+            firstValue = currentValue;
+            currentValue += 'x';
+            updateDisplay();
+        }
+        else{
         operator = '*';
-        currentValue += 'x';
+        currentValue += '*';
         updateDisplay();
+        }
     })
     buttonDivide.addEventListener('click', function(){
+        if (firstValue && operator && secondValue){
+            operate(firstValue, operator, secondValue);
+            firstValue = currentValue;
+            currentValue += '÷';
+            updateDisplay();
+        }
+        else{
         operator = '/';
         currentValue += '÷';
         updateDisplay();
+        }
     })
 
     buttonEqual.addEventListener('click', function(){
@@ -230,24 +268,3 @@ function updateDisplay(){
         clear();
     })
 
-
-    // buttonModular.addEventListener('click', function(){
-    //     let val = document.createElement ('p')
-    //     val.textContent = ('3');
-    //     display.appendChild (val);
-    // })
-    // buttonThree.addEventListener('click', function(){
-    //     let val = document.createElement ('p')
-    //     val.textContent = ('3');
-    //     display.appendChild (val);
-    // })
-    // buttonThree.addEventListener('click', function(){
-    //     let val = document.createElement ('p')
-    //     val.textContent = ('3');
-    //     display.appendChild (val);
-    // })
-
-
-
-
-// operate(a, operator, b);
