@@ -98,12 +98,30 @@ secondValue = '';
 updateDisplay();
 }
 
+// DEL Undo function
+function undo(){
+    if (currentValue != ''){
+        currentValue = currentValue.slice (0, -1);
+        updateDisplay()
+
+        if (operator){
+            secondValue = secondValue.slice(0, -1);
+        }
+        else{
+            firstValue = firstValue.slice(0, -1);
+        }
+    }
+    
+}
+
 // displayValue function
 function updateDisplay(){
     display.textContent = currentValue;
 }
 
-// events
+
+
+//calculation events
     buttonOne.addEventListener('click', function(){
     currentValue += '1';
     updateDisplay();
@@ -240,7 +258,7 @@ function updateDisplay(){
         }
         else{
         operator = '*';
-        currentValue += '*';
+        currentValue += 'x';
         updateDisplay();
         }
     })
@@ -267,5 +285,9 @@ function updateDisplay(){
     })
     buttonAC.addEventListener('click', function(){
         clear();
+    })
+
+    buttonDEL.addEventListener('click', function(){
+       undo();
     })
 
