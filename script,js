@@ -52,6 +52,7 @@ else if(operator == '/'){
     divide(a,b);
 }
 
+
 firstValue = currentValue;
 secondValue = "";
 operator = "";
