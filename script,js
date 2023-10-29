@@ -302,3 +302,67 @@ function updateDisplay(){
         }
     }
     })
+
+    // keyboard support
+    document.addEventListener('keydown', function(event){
+        switch(event.key){
+            case '0':
+                buttonZero.click();
+                break;
+            case '1':
+                buttonOne.click();
+                break;
+            case '2':
+                buttonTwo.click();
+                break;
+            case '3':
+                buttonThree.click();
+                break;
+            case '4':
+                buttonFour.click();
+                break;            
+            case '5':
+                buttonFive.click();
+                break;
+            case '6':
+                buttonSix.click();
+                break;
+            case '7':
+                buttonSeven.click();
+                break;
+            case '8':
+                buttonEight.click();
+                break;
+            case '9':
+                buttonNine.click();
+                break;
+            case '+':
+                buttonAdd.click();
+                break;
+            case '-':
+                buttonSubtract.click();
+                break;
+            case '*':
+                buttonMultiply.click();
+                break;            
+            case '/':
+                buttonDivide.click();
+                break;
+            case '.':
+                buttonDot.click();
+                break;
+            case '=':
+                buttonEqual.click();
+                break;
+            case 'Enter':
+                buttonEqual.click();
+                break;
+            case 'Backspace':
+                buttonDEL.click();
+                break;
+            case 'Delete':
+                buttonAC.click();
+                break;
+                
+        }
+    })
